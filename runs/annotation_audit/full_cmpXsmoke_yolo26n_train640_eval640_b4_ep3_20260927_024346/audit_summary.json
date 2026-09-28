@@ -1,0 +1,31 @@
+{
+  "runs": [
+    {
+      "run": "cmpXsmoke_640",
+      "checkpoint": "epoch2.pt",
+      "threshold": 0.6728488802909851
+    }
+  ],
+  "counts_all_errors": {
+    "cmpXsmoke_640": {
+      "false_positive": {
+        "model error": 5,
+        "suspected missing annotation": 0,
+        "questionable ground-truth box": 0,
+        "ambiguous object": 0
+      },
+      "missed_bag": {
+        "model error": 401,
+        "suspected missing annotation": 0,
+        "questionable ground-truth box": 1,
+        "ambiguous object": 0
+      }
+    }
+  },
+  "n_examples": 31,
+  "contact_sheets": {
+    "model error": "sheet_model_error.jpg"
+  },
+  "labels_modified": false,
+  "official_test_data_used": false
+}

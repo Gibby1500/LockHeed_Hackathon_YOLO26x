@@ -1,0 +1,6 @@
+-r event_materials/requirements.txt
+ultralytics==8.4.163
+numpy
+jupyterlab
+ipykernel
+nbformat

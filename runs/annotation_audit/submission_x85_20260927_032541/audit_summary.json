@@ -1,0 +1,31 @@
+{
+  "runs": [
+    {
+      "run": "submission_640",
+      "checkpoint": "best.pt",
+      "threshold": 0.4847066402435303
+    }
+  ],
+  "counts_all_errors": {
+    "submission_640": {
+      "false_positive": {
+        "model error": 0,
+        "suspected missing annotation": 0,
+        "questionable ground-truth box": 0,
+        "ambiguous object": 0
+      },
+      "missed_bag": {
+        "model error": 532,
+        "suspected missing annotation": 0,
+        "questionable ground-truth box": 0,
+        "ambiguous object": 0
+      }
+    }
+  },
+  "n_examples": 18,
+  "contact_sheets": {
+    "model error": "sheet_model_error.jpg"
+  },
+  "labels_modified": false,
+  "official_test_data_used": false
+}

@@ -1,0 +1,31 @@
+{
+  "copied_files": 3433,
+  "copied_bytes": 718441143,
+  "notebook_cells": 55,
+  "python_code_cells": 22,
+  "syntax_errors": [],
+  "notebook_byte_identical": true,
+  "execution": "Not run; no training or installation authorized by repository preparation",
+  "copy_hash_mismatches": [],
+  "dataset_pair_inventory": {
+    "training": {
+      "jpg_images": 628,
+      "labels": 628,
+      "images_without_labels": 0,
+      "labels_without_images": 0
+    },
+    "val": {
+      "jpg_images": 199,
+      "labels": 199,
+      "images_without_labels": 0,
+      "labels_without_images": 0
+    },
+    "test": {
+      "jpg_images": 0,
+      "labels": 0,
+      "images_without_labels": 0,
+      "labels_without_images": 0
+    }
+  },
+  "checkpoint_metadata_matches_notebook_run": true
+}

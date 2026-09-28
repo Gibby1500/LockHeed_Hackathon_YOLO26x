@@ -1,0 +1,48 @@
+{
+  "label": "evaluate run",
+  "status": "OK",
+  "run_mode": "evaluate",
+  "overrides": {
+    "eval_checkpoint": "weights/yolo26n.pt",
+    "run_name": null
+  },
+  "notebook": "00_starter_notebook_fixed.ipynb",
+  "notebook_sha256": "87ab086d8db787507045ee3a67e64420446d7e4270157fc36540d5509902df2d",
+  "code_tree_sha256": "5b7c2be416d2ce96c7e0783bb552ce09e34afe47ef21234f3a272e9fccc49bb8",
+  "runtime_s": 25.7,
+  "figures_rendered": 1,
+  "errors": [],
+  "key_output": [
+    "RUN_MODE = 'evaluate'   RUN_NAME = 'evaluate_yolo26s_640_20260926_020213'",
+    "evaluate mode: training-data conversion skipped",
+    "mode: evaluate | GPU: NVIDIA GeForce RTX 3070 Laptop GPU | model: C:\\Users\\diego\\OneDrive\\Documents\\GitHub\\Lockheed-Hackathon\\uprm-hackathon-2026\\weights\\yolo26n.pt",
+    "epochs: 0 | train batch: 8 | train fraction: 1.0 | evaluated val images: 199",
+    "evaluate mode: no training run is configured",
+    "evaluate mode: training skipped",
+    "validation mAP@50 (plastic_bag), all 199 evaluated val images: 0.1079  (0.10785218649967149)",
+    "validation mAP@50 (plastic_bag), starter-notebook loader (drop_last=True): 0.1087  (0.10872369615191763)",
+    "inference settings: {'nms_kwarg': 'nms', 'nms_value': None, 'end2end_head': False, 'imgsz': 640, 'conf': 0.001, 'iou': 0.7, 'max_det': 300, 'augment': False, 'device': '0'}",
+    "No training history available (evaluate mode without the checkpoint's results.csv).",
+    "  at conf >= 0.3: bags found 9/537, missed bags 528, false positives 38",
+    "RUN_OFFICIAL_TEST is False - official test data not downloaded.",
+    "RUN_OFFICIAL_TEST is False - no test loader.",
+    "RUN_OFFICIAL_TEST is False - official test set not scored."
+  ],
+  "executed_copy": "runs\\notebook\\EVAL_CRASH_TEST_20260926_020232.ipynb",
+  "env": {
+    "time": "2026-09-26T02:02:34",
+    "python": "3.14.6",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "hostname": "Gibby",
+    "torch": "2.13.0+cu132",
+    "cuda_runtime": "13.2",
+    "cudnn": 92000,
+    "cuda_available": true,
+    "torchvision": "0.28.0+cu132",
+    "ultralytics": "8.4.163",
+    "gpu": "NVIDIA GeForce RTX 3070 Laptop GPU",
+    "gpu_mem_gb": 8.0,
+    "git_sha": "eeccb647083f6bc76b701f6ec4163187ca116ddf",
+    "git_dirty": true
+  }
+}

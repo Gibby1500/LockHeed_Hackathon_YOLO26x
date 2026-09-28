@@ -1,0 +1,266 @@
+######## train
+02:59:02 ===== train
+02:59:02 GPU lock held for x85 train (524 / 8192 MiB in use)
+02:59:14 fine-tune parent (fixed for all three, from the frozen store): weighted greedy soup (recal, shares [1.0, 1.0]) 0.7154616496779701
+02:59:35 train/val gap parent: train 0.7643 | val 0.7155 | gap +0.0488
+02:59:35 train x85ft1: full_x85ft1_yolo26n_train640_eval640_b4_ep1_20260927_025935 (batch 4)
+C:\Users\diego\OneDrive\Documents\GitHub\Lockheed-Hackathon\.venv\Lib\site-packages\zmq\_future.py:718: RuntimeWarning: Proactor event loop does not implement add_reader family of methods required for zmq. Registering an additional selector thread for add_reader support via tornado. Use `asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())` to avoid this warning.
+  self._get_loop()
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+
+[notice] A new release of pip is available: 26.1.2 -> 26.2.1
+[notice] To update, run: C:\Users\diego\OneDrive\Documents\GitHub\Lockheed-Hackathon\.venv\Scripts\python.exe -m pip install --upgrade pip
+03:01:42 x85ft1 finished in 2.1 min: best.pt organizer mAP@50 0.7207557071339001
+03:01:44     frozen best.pt        full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346 epoch 3: 0.6919430155645718 (top 5 of the baseline run)
+03:01:44     frozen epoch1.pt      full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346 epoch 2: 0.6278578042984009 (top 5 of the baseline run)
+03:01:44     frozen epoch0.pt      full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346 epoch 1: 0.5902075428854334 (top 5 of the baseline run)
+03:01:44     frozen best.pt        full_x85ft1_yolo26n_train640_eval640_b4_ep1_20260927_025935 epoch 1: 0.7207557071339001 (top 3 of ft1)
+03:01:44 freeze: 4 frozen checkpoints; baseline run late mean (epochs 71-100) None; pick-the-best-epoch held-out estimate 0.694406 vs its full-validation 0.691943
+03:01:45 soup ingredients (frozen, compatible): 4
+03:01:45     0.720756  full_x85ft1_yolo26n_train640_eval640_b4_ep1_20260927_025935/best.pt
+03:01:45     0.691943  full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/best.pt
+03:01:45     0.627858  full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/epoch1.pt
+03:01:45     0.590208  full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/epoch0.pt
+03:02:02 cached soup_ecd2bb793fde3b3d_raw.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7068 (16.0 s)
+03:02:02 soup ecd2bb793fde3b3d [raw] 4 ingredients -> organizer mAP@50 0.706829 (build 1.3 s, eval 16.0 s)
+03:02:28 cached soup_ce1e44e0ce6a4c18_recal.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7169 (16.4 s)
+03:02:28 soup ce1e44e0ce6a4c18 [recal] 4 ingredients -> organizer mAP@50 0.716878 (build 9.5 s, eval 16.4 s)
+03:02:38 BatchNorm recalibration (uniform soup): raw 0.706829 vs recal 0.716878 -> use recal
+03:03:03 cached soup_b915d605d2561a93_recal.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7176 (15.8 s)
+03:03:03 soup b915d605d2561a93 [recal] 1 ingredients -> organizer mAP@50 0.717603 (build 9.1 s, eval 15.8 s)
+03:03:03 weighted greedy soup: start c30577078486 -> 0.717603
+03:03:31 cached soup_adfb6a12c58b42cd_recal.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7071 (17.2 s)
+03:03:31 soup adfb6a12c58b42cd [recal] 2 ingredients -> organizer mAP@50 0.707067 (build 10.3 s, eval 17.2 s)
+03:03:58 cached soup_6c2ac44ad4f0f7f5_recal.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7148 (16.6 s)
+03:03:58 soup 6c2ac44ad4f0f7f5 [recal] 2 ingredients -> organizer mAP@50 0.714844 (build 10.3 s, eval 16.6 s)
+03:04:01 weighted greedy soup: +c37d40270e64 (alpha 0.5) -> 0.714844 rejected; best 0.717603 with 1 ingredients
+03:04:28 cached soup_ff8ede0d5741ba38_recal.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7134 (16.9 s)
+03:04:28 soup ff8ede0d5741ba38 [recal] 2 ingredients -> organizer mAP@50 0.713391 (build 9.8 s, eval 16.9 s)
+03:04:56 cached soup_b3212be755eba6da_recal.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7143 (16.8 s)
+03:04:56 soup b3212be755eba6da [recal] 2 ingredients -> organizer mAP@50 0.714336 (build 10.4 s, eval 16.8 s)
+03:04:58 weighted greedy soup: +8a26a6868150 (alpha 0.5) -> 0.714336 rejected; best 0.717603 with 1 ingredients
+03:05:25 cached soup_8109de6500ce4980_recal.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7079 (17.0 s)
+03:05:25 soup 8109de6500ce4980 [recal] 2 ingredients -> organizer mAP@50 0.707925 (build 9.9 s, eval 17.0 s)
+03:05:52 cached soup_f3c0b6420d65f933_recal.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7203 (17.0 s)
+03:05:52 soup f3c0b6420d65f933 [recal] 2 ingredients -> organizer mAP@50 0.720252 (build 10.4 s, eval 17.0 s)
+03:06:01 weighted greedy soup: +6c1478a2a0d6 (alpha 0.5) -> 0.720252 rejected; best 0.717603 with 1 ingredients
+03:06:01 soup: uniform raw 0.706829 / recal 0.716878; weighted greedy (recal) 1 ingredients, shares [1.0] -> 0.717603 (256.7 s)
+03:06:01 tta individual: C:\Users\diego\OneDrive\Documents\GitHub\Lockheed-Hackathon\uprm-hackathon-2026\models\x85_frozen\full_x85ft1_yolo26n_train640_eval640_b4_ep1_20260927_025935\best.pt
+03:06:19 cached best.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7208 (17.4 s)
+03:06:35 cached best.pt imgsz640_iou0.7_hflip: organizer mAP@50 0.7294 (16.1 s)
+03:07:00 cached best.pt imgsz800_iou0.7_orig: organizer mAP@50 0.7147 (15.9 s)
+03:07:27 cached best.pt imgsz800_iou0.7_hflip: organizer mAP@50 0.7215 (16.5 s)
+03:07:54 cached best.pt imgsz960_iou0.7_orig: organizer mAP@50 0.7074 (16.8 s)
+03:08:24 cached best.pt imgsz960_iou0.7_hflip: organizer mAP@50 0.7022 (18.9 s)
+03:08:38   TTA step 1: 640o1 0.720756 -> propose 640o1|640f2 0.696076: rejected (gain -0.0247, 1/10 halves, P 0.00)
+03:08:48 tta individual: plain 0.720756 -> 0.720756 with imgsz 640, NMS IoU 0.7; live 0.7207557071339001 (reproduced)
+03:09:17 select: frozen full_x85ft1_yolo26n_train640_eval640_b4_ep1_20260927_025935/best.pt full 0.720756 | held-out estimate 0.718227 (optimism gap +0.0025) | target >= 0.87: not met | floor >= 0.85: not met | organizer halves match: True
+03:09:17     0.720756  picked 8/10  frozen full_x85ft1_yolo26n_train640_eval640_b4_ep1_20260927_025935/best.pt
+03:09:17     0.716878  picked 2/10  uniform soup (recal)
+03:09:17     0.706829  picked 0/10  uniform soup (raw)
+03:09:17     0.691943  picked 0/10  baseline full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/best.pt (ep 3)
+03:09:17     0.627858  picked 0/10  frozen full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/epoch1.pt
+03:09:17     0.590208  picked 0/10  frozen full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/epoch0.pt
+03:09:39 train/val gap ft1: train 0.7725 | val 0.7208 | gap +0.0518
+03:09:39 train x85ft2: full_x85ft2_yolo26n_train640_eval640_b4_ep1_20260927_030939 (batch 4)
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+
+[notice] A new release of pip is available: 26.1.2 -> 26.2.1
+[notice] To update, run: C:\Users\diego\OneDrive\Documents\GitHub\Lockheed-Hackathon\.venv\Scripts\python.exe -m pip install --upgrade pip
+03:11:39 x85ft2 finished in 2.0 min: best.pt organizer mAP@50 0.7251958223906431
+03:11:41     frozen best.pt        full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346 epoch 3: 0.6919430155645718 (top 5 of the baseline run)
+03:11:41     frozen epoch1.pt      full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346 epoch 2: 0.6278578042984009 (top 5 of the baseline run)
+03:11:41     frozen epoch0.pt      full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346 epoch 1: 0.5902075428854334 (top 5 of the baseline run)
+03:11:41     frozen best.pt        full_x85ft1_yolo26n_train640_eval640_b4_ep1_20260927_025935 epoch 1: 0.7207557071339001 (top 3 of ft1)
+03:11:41     frozen best.pt        full_x85ft2_yolo26n_train640_eval640_b4_ep1_20260927_030939 epoch 1: 0.7251958223906431 (top 3 of ft2)
+03:11:41 freeze: 5 frozen checkpoints; baseline run late mean (epochs 71-100) None; pick-the-best-epoch held-out estimate 0.694406 vs its full-validation 0.691943
+03:11:41 soup ingredients (frozen, compatible): 5
+03:11:41     0.725196  full_x85ft2_yolo26n_train640_eval640_b4_ep1_20260927_030939/best.pt
+03:11:41     0.720756  full_x85ft1_yolo26n_train640_eval640_b4_ep1_20260927_025935/best.pt
+03:11:41     0.691943  full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/best.pt
+03:11:41     0.627858  full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/epoch1.pt
+03:11:41     0.590208  full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/epoch0.pt
+03:11:57 cached soup_9f6f8d98f3f40b2d_raw.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7131 (15.8 s)
+03:11:58 soup 9f6f8d98f3f40b2d [raw] 5 ingredients -> organizer mAP@50 0.713064 (build 0.6 s, eval 15.8 s)
+03:12:25 cached soup_7912c5607cc30853_recal.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7209 (16.6 s)
+03:12:25 soup 7912c5607cc30853 [recal] 5 ingredients -> organizer mAP@50 0.720908 (build 10.6 s, eval 16.6 s)
+03:12:35 BatchNorm recalibration (uniform soup): raw 0.713064 vs recal 0.720908 -> use raw
+03:12:35 weighted greedy soup: start 5f0e36e1c51e -> 0.725196
+03:12:52 cached soup_1a8988d180f0aff2_raw.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7236 (16.2 s)
+03:12:52 soup 1a8988d180f0aff2 [raw] 2 ingredients -> organizer mAP@50 0.723564 (build 0.6 s, eval 16.2 s)
+03:13:09 cached soup_ae5732c36bbefeac_raw.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7239 (16.4 s)
+03:13:09 soup ae5732c36bbefeac [raw] 2 ingredients -> organizer mAP@50 0.723895 (build 0.8 s, eval 16.4 s)
+03:13:11 weighted greedy soup: +c30577078486 (alpha 0.5) -> 0.723895 rejected; best 0.725196 with 1 ingredients
+03:13:28 cached soup_9b9832a635ce4ad4_raw.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7136 (16.6 s)
+03:13:28 soup 9b9832a635ce4ad4 [raw] 2 ingredients -> organizer mAP@50 0.713573 (build 0.6 s, eval 16.6 s)
+03:13:45 cached soup_7a58b0f2d2f26496_raw.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7216 (16.0 s)
+03:13:45 soup 7a58b0f2d2f26496 [raw] 2 ingredients -> organizer mAP@50 0.721602 (build 0.7 s, eval 16.0 s)
+03:13:47 weighted greedy soup: +c37d40270e64 (alpha 0.5) -> 0.721602 rejected; best 0.725196 with 1 ingredients
+03:14:04 cached soup_0af9e7a0b4195009_raw.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7000 (16.4 s)
+03:14:04 soup 0af9e7a0b4195009 [raw] 2 ingredients -> organizer mAP@50 0.700021 (build 0.6 s, eval 16.4 s)
+03:14:20 cached soup_b7c58d846f7b1d58_raw.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7146 (15.4 s)
+03:14:20 soup b7c58d846f7b1d58 [raw] 2 ingredients -> organizer mAP@50 0.714604 (build 0.6 s, eval 15.4 s)
+03:14:22 weighted greedy soup: +8a26a6868150 (alpha 0.5) -> 0.714604 rejected; best 0.725196 with 1 ingredients
+03:14:37 cached soup_4323322109a3d733_raw.pt imgsz640_iou0.7_orig: organizer mAP@50 0.6953 (14.5 s)
+03:14:37 soup 4323322109a3d733 [raw] 2 ingredients -> organizer mAP@50 0.695321 (build 0.6 s, eval 14.5 s)
+03:14:52 cached soup_7256b25afaa2bffa_raw.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7087 (14.5 s)
+03:14:52 soup 7256b25afaa2bffa [raw] 2 ingredients -> organizer mAP@50 0.708691 (build 0.6 s, eval 14.5 s)
+03:14:54 weighted greedy soup: +6c1478a2a0d6 (alpha 0.5) -> 0.708691 rejected; best 0.725196 with 1 ingredients
+03:14:54 soup: uniform raw 0.713064 / recal 0.720908; weighted greedy (raw) 1 ingredients, shares [1.0] -> 0.725196 (193.2 s)
+03:14:54 tta individual: C:\Users\diego\OneDrive\Documents\GitHub\Lockheed-Hackathon\uprm-hackathon-2026\models\x85_frozen\full_x85ft2_yolo26n_train640_eval640_b4_ep1_20260927_030939\best.pt
+03:15:08 cached best.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7252 (14.2 s)
+03:15:23 cached best.pt imgsz640_iou0.7_hflip: organizer mAP@50 0.7226 (14.9 s)
+03:15:46 cached best.pt imgsz800_iou0.7_orig: organizer mAP@50 0.7167 (13.7 s)
+03:16:10 cached best.pt imgsz800_iou0.7_hflip: organizer mAP@50 0.7175 (14.4 s)
+03:16:33 cached best.pt imgsz960_iou0.7_orig: organizer mAP@50 0.6924 (14.3 s)
+03:16:57 cached best.pt imgsz960_iou0.7_hflip: organizer mAP@50 0.6929 (14.5 s)
+03:17:07   TTA step 1: 640o1 0.725196 -> propose 640o1|640f1 0.699909: rejected (gain -0.0253, 0/10 halves, P 0.00)
+03:17:15 tta individual: plain 0.725196 -> 0.725196 with imgsz 640, NMS IoU 0.7; live 0.7251958223906431 (reproduced)
+03:17:38 select: frozen full_x85ft2_yolo26n_train640_eval640_b4_ep1_20260927_030939/best.pt full 0.725196 | held-out estimate 0.724048 (optimism gap +0.0011) | target >= 0.87: not met | floor >= 0.85: not met | organizer halves match: True
+03:17:38     0.725196  picked 7/10  frozen full_x85ft2_yolo26n_train640_eval640_b4_ep1_20260927_030939/best.pt
+03:17:38     0.720908  picked 0/10  uniform soup (recal)
+03:17:38     0.720756  picked 3/10  frozen full_x85ft1_yolo26n_train640_eval640_b4_ep1_20260927_025935/best.pt
+03:17:38     0.713064  picked 0/10  uniform soup (raw)
+03:17:38     0.691943  picked 0/10  baseline full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/best.pt (ep 3)
+03:17:38     0.627858  picked 0/10  frozen full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/epoch1.pt
+03:17:38     0.590208  picked 0/10  frozen full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/epoch0.pt
+03:17:58 train/val gap ft2: train 0.7734 | val 0.7252 | gap +0.0482
+03:17:58 train x85ft3: full_x85ft3_yolo26n_train960_eval960_b4_ep1_20260927_031758 (batch 4)
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+
+[notice] A new release of pip is available: 26.1.2 -> 26.2.1
+[notice] To update, run: C:\Users\diego\OneDrive\Documents\GitHub\Lockheed-Hackathon\.venv\Scripts\python.exe -m pip install --upgrade pip
+03:19:59 x85ft3 finished in 2.0 min: best.pt organizer mAP@50 0.6911881444129078
+03:20:13 cached best.pt imgsz640_iou0.7_orig: organizer mAP@50 0.6844 (13.4 s)
+03:20:15     frozen best.pt        full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346 epoch 3: 0.6919430155645718 (top 5 of the baseline run)
+03:20:15     frozen epoch1.pt      full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346 epoch 2: 0.6278578042984009 (top 5 of the baseline run)
+03:20:15     frozen epoch0.pt      full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346 epoch 1: 0.5902075428854334 (top 5 of the baseline run)
+03:20:15     frozen best.pt        full_x85ft1_yolo26n_train640_eval640_b4_ep1_20260927_025935 epoch 1: 0.7207557071339001 (top 3 of ft1)
+03:20:15     frozen best.pt        full_x85ft2_yolo26n_train640_eval640_b4_ep1_20260927_030939 epoch 1: 0.7251958223906431 (top 3 of ft2)
+03:20:15     frozen best.pt        full_x85ft3_yolo26n_train960_eval960_b4_ep1_20260927_031758 epoch 1: 0.6844222315333105 (top 3 of ft3)
+03:20:15 freeze: 6 frozen checkpoints; baseline run late mean (epochs 71-100) None; pick-the-best-epoch held-out estimate 0.694406 vs its full-validation 0.691943
+03:20:15 soup ingredients (frozen, compatible): 6
+03:20:15     0.725196  full_x85ft2_yolo26n_train640_eval640_b4_ep1_20260927_030939/best.pt
+03:20:15     0.720756  full_x85ft1_yolo26n_train640_eval640_b4_ep1_20260927_025935/best.pt
+03:20:15     0.691943  full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/best.pt
+03:20:15     0.684422  full_x85ft3_yolo26n_train960_eval960_b4_ep1_20260927_031758/best.pt
+03:20:15     0.627858  full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/epoch1.pt
+03:20:15     0.590208  full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/epoch0.pt
+03:20:29 cached soup_becad95d6bdbfd77_raw.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7175 (13.4 s)
+03:20:29 soup becad95d6bdbfd77 [raw] 6 ingredients -> organizer mAP@50 0.717547 (build 0.7 s, eval 13.4 s)
+03:20:53 cached soup_cd172974c33f253f_recal.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7171 (14.3 s)
+03:20:53 soup cd172974c33f253f [recal] 6 ingredients -> organizer mAP@50 0.717089 (build 8.7 s, eval 14.3 s)
+03:20:56 BatchNorm recalibration (uniform soup): raw 0.717547 vs recal 0.717089 -> use raw
+03:20:56 weighted greedy soup: start 5f0e36e1c51e -> 0.725196
+03:20:56 weighted greedy soup: +c30577078486 (alpha 0.5) -> 0.723895 rejected; best 0.725196 with 1 ingredients
+03:20:56 weighted greedy soup: +c37d40270e64 (alpha 0.5) -> 0.721602 rejected; best 0.725196 with 1 ingredients
+03:21:10 cached soup_2d34da90cdfaacab_raw.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7201 (14.0 s)
+03:21:11 soup 2d34da90cdfaacab [raw] 2 ingredients -> organizer mAP@50 0.720058 (build 0.6 s, eval 14.0 s)
+03:21:26 cached soup_2dca13c020688fe6_raw.pt imgsz640_iou0.7_orig: organizer mAP@50 0.7255 (14.3 s)
+03:21:26 soup 2dca13c020688fe6 [raw] 2 ingredients -> organizer mAP@50 0.725474 (build 0.7 s, eval 14.3 s)
+03:21:33 weighted greedy soup: +ac39e95d477a (alpha 0.5) -> 0.725474 rejected; best 0.725196 with 1 ingredients
+03:21:33 weighted greedy soup: +8a26a6868150 (alpha 0.5) -> 0.714604 rejected; best 0.725196 with 1 ingredients
+03:21:33 weighted greedy soup: +6c1478a2a0d6 (alpha 0.5) -> 0.708691 rejected; best 0.725196 with 1 ingredients
+03:21:33 soup: uniform raw 0.717547 / recal 0.717089; weighted greedy (raw) 1 ingredients, shares [1.0] -> 0.725196 (78.4 s)
+03:21:33 tta individual: already searched for this checkpoint
+03:21:57 select: frozen full_x85ft2_yolo26n_train640_eval640_b4_ep1_20260927_030939/best.pt full 0.725196 | held-out estimate 0.721401 (optimism gap +0.0038) | target >= 0.87: not met | floor >= 0.85: not met | organizer halves match: True
+03:21:57     0.725196  picked 6/10  frozen full_x85ft2_yolo26n_train640_eval640_b4_ep1_20260927_030939/best.pt
+03:21:57     0.720756  picked 3/10  frozen full_x85ft1_yolo26n_train640_eval640_b4_ep1_20260927_025935/best.pt
+03:21:57     0.717547  picked 0/10  uniform soup (raw)
+03:21:57     0.717089  picked 1/10  uniform soup (recal)
+03:21:57     0.691943  picked 0/10  baseline full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/best.pt (ep 3)
+03:21:57     0.684422  picked 0/10  frozen full_x85ft3_yolo26n_train960_eval960_b4_ep1_20260927_031758/best.pt
+03:21:57     0.627858  picked 0/10  frozen full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/epoch1.pt
+03:21:57     0.590208  picked 0/10  frozen full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/epoch0.pt
+03:22:16 train/val gap ft3: train 0.7358 | val 0.6844 | gap +0.0514
+03:22:16 ===== train done in 23.2 min
+03:22:16 report: C:\Users\diego\OneDrive\Documents\GitHub\Lockheed-Hackathon\uprm-hackathon-2026\runs\x85\report_20260927_032216\report.md
+03:22:16 best verified single-checkpoint candidate: ft2 best (best.pt) imgsz 640, NMS IoU 0.7 -> 0.7251958223906431
+03:22:16 VERDICT: no fresh-kernel verification yet
+03:22:16 manifest: C:\Users\diego\OneDrive\Documents\GitHub\Lockheed-Hackathon\uprm-hackathon-2026\runs\x85\manifest.json
+######## train exit 1
+######## finalize
+03:22:17 ===== finalize
+03:22:17 GPU lock held for x85 finalize (418 / 8192 MiB in use)
+03:22:17 finalize: frozen full_x85ft2_yolo26n_train640_eval640_b4_ep1_20260927_030939/best.pt -> C:\Users\diego\OneDrive\Documents\GitHub\Lockheed-Hackathon\uprm-hackathon-2026\models\x85_submission_20260927_032217; fresh-kernel run of 00_submission_x85_20260927_032217.ipynb
+C:\Users\diego\OneDrive\Documents\GitHub\Lockheed-Hackathon\.venv\Lib\site-packages\zmq\_future.py:718: RuntimeWarning: Proactor event loop does not implement add_reader family of methods required for zmq. Registering an additional selector thread for add_reader support via tornado. Use `asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())` to avoid this warning.
+  self._get_loop()
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+
+[notice] A new release of pip is available: 26.1.2 -> 26.2.1
+[notice] To update, run: C:\Users\diego\OneDrive\Documents\GitHub\Lockheed-Hackathon\.venv\Scripts\python.exe -m pip install --upgrade pip
+03:23:01 SUBMISSION frozen full_x85ft2_yolo26n_train640_eval640_b4_ep1_20260927_030939/best.pt (imgsz 640, NMS IoU 0.7): fresh-kernel organizer mAP@50 0.7251958223906431 | expected 0.7251958223906431 | checks PASSED | target NOT achieved (>= 0.87, judged on the held-out estimate)
+03:23:01 ===== finalize done in 0.7 min
+03:23:01 manifest: C:\Users\diego\OneDrive\Documents\GitHub\Lockheed-Hackathon\uprm-hackathon-2026\runs\x85\manifest.json
+######## finalize exit 0
+03:23:02 GPU lock held for x85 report (418 / 8192 MiB in use)
+03:23:11 near-duplicate train/val images (dHash <= 4 bits): 29 e.g. [{'val': 'C:\\Users\\diego\\OneDrive\\Documents\\GitHub\\Lockheed-Hackathon\\uprm-hackathon-2026\\data\\val\\image\\199.jpg', 'train': 'C:\\Users\\diego\\OneDrive\\Documents\\GitHub\\Lockheed-Hackathon\\uprm-hackathon-2026\\data\\training\\image\\133.jpg', 'hamming': 3}, {'val': 'C:\\Users\\diego\\OneDrive\\Documents\\GitHub\\Lockheed-Hackathon\\uprm-hackathon-2026\\data\\val\\image\\596.jpg', 'train': 'C:\\Users\\diego\\OneDrive\\Documents\\GitHub\\Lockheed-Hackathon\\uprm-hackathon-2026\\data\\training\\image\\563.jpg', 'hamming': 4}, {'val': 'C:\\Users\\diego\\OneDrive\\Documents\\GitHub\\Lockheed-Hackathon\\uprm-hackathon-2026\\data\\val\\image\\remondis_1-2022-07-19-06-18-50.jpg', 'train': 'C:\\Users\\diego\\OneDrive\\Documents\\GitHub\\Lockheed-Hackathon\\uprm-hackathon-2026\\data\\training\\image\\remondis_1-2022-07-19-06-18-51.jpg', 'hamming': 3}]
+reusing converted dataset in C:\Users\diego\OneDrive\Documents\GitHub\Lockheed-Hackathon\uprm-hackathon-2026\yolo_data
+03:23:12 inventory: 4 run folders, 4 yolo26n runs, 18 yolo26n checkpoint files, 6 eligible (1.0 s)
+03:23:12 python 3.14.6 | torch 2.13.0+cu132 | CUDA 13.2 | ultralytics 8.4.163 | GPU NVIDIA GeForce RTX 3070 Laptop GPU | disk free 69.7 GB
+03:23:12 data fingerprints {'training': 'a9e28b9586cd968411e8c63d4f7f90edba20b25209edb15a7792076ef4d0bc1c', 'val': '727277871639628b0e025c7c027f124b08346a96a706e8495469a31e236c49ef'} | val 199 images / 537 bags | train 628 images | background images {'training': 0, 'val': 0} | train/val exact duplicates 0
+03:23:12 check_det_dataset: {'ok': True, 'nc': 1, 'names': {0: 'plastic_bag'}} | kernel 'python3' available: True | GPU: 418 / 8192 MiB in use; processes: 20304, C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\CrossDeviceResume.exe, [N/A]
+16312, C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe, [N/A]
+19964, C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe, [N/A]
+26284, C:\Program Files (x86)\Microsoft\EdgeWebView\Application\153.0.4234.48\msedgewebview2.exe, [N/A]
+4148, C:\Program Files\WindowsApps\Microsoft.YourPhone_1.26072.255.0_x64__8wekyb3d8bbwe\PhoneExperienceHost.exe, [N/A]
+16200, C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TextInputHost.exe, [N/A]
+29712, C:\Program Files\WindowsApps\MicrosoftWindows.Client.WebExperience_526.21100.40.0_x64__cw5n1h2txyewy\WidgetBoard.exe, [N/A]
+34520, C:\Program Files\WindowsApps\Claude_2.9939.2.0_x64__pzs8sxrjxfjjc\app\claude.exe, [N/A]
+26172, C:\Program Files\WindowsApps\Claude_2.9939.2.0_x64__pzs8sxrjxfjjc\app\claude.exe, [N/A]
+17840, C:\Windows\SystemApps\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\Microsoft.AAD.BrokerPlugin.exe, [N/A]
+32704, C:\Users\diego\AppData\Local\Programs\Microsoft VS Code\Code.exe, [N/A]
+23080, C:\Program Files\WindowsApps\OpenAI.Codex_26.924.2738.0_x64__2p2nqsd0c76g0\app\ChatGPT.exe, [N/A]
+27596, C:\Users\diego\AppData\Local\OpenAI\Codex\runtimes\cua_node\b63ee7ee40c23b77\bin\node_modules\@oai\sky\bin\windows\swift\x64\codex-computer-use-swift.exe, [N/A]
+29312, C:\Windows\SystemApps\Microsoft.LockApp_cw5n1h2txyewy\LockApp.exe, [N/A]
+8060, C:\Users\diego\AppData\Local\Discord\app-1.0.9259\Discord.exe, [N/A]
+03:23:12 eligible yolo26n checkpoints: 6
+03:23:12 preflight passed
+03:23:12 ===== baseline
+03:23:12 baseline: already reproduced (full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/best.pt (ep 3): 0.6919430155645718); --rebaseline to redo it
+03:23:12 ===== baseline done in 0.0 min
+03:23:12 ===== freeze
+03:23:21     frozen best.pt        full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346 epoch 3: 0.6919430155645718 (top 5 of the baseline run)
+03:23:21     frozen epoch1.pt      full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346 epoch 2: 0.6278578042984009 (top 5 of the baseline run)
+03:23:21     frozen epoch0.pt      full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346 epoch 1: 0.5902075428854334 (top 5 of the baseline run)
+03:23:21     frozen best.pt        full_x85ft1_yolo26n_train640_eval640_b4_ep1_20260927_025935 epoch 1: 0.7207557071339001 (top 3 of ft1)
+03:23:21     frozen best.pt        full_x85ft2_yolo26n_train640_eval640_b4_ep1_20260927_030939 epoch 1: 0.7251958223906431 (top 3 of ft2)
+03:23:21     frozen best.pt        full_x85ft3_yolo26n_train960_eval960_b4_ep1_20260927_031758 epoch 1: 0.6844222315333105 (top 3 of ft3)
+03:23:21 freeze: 6 frozen checkpoints; baseline run late mean (epochs 71-100) None; pick-the-best-epoch held-out estimate 0.694406 vs its full-validation 0.691943
+03:23:21 ===== freeze done in 0.1 min
+03:23:21 ===== soup
+03:23:21 soup ingredients (frozen, compatible): 6
+03:23:21     0.725196  full_x85ft2_yolo26n_train640_eval640_b4_ep1_20260927_030939/best.pt
+03:23:21     0.720756  full_x85ft1_yolo26n_train640_eval640_b4_ep1_20260927_025935/best.pt
+03:23:21     0.691943  full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/best.pt
+03:23:21     0.684422  full_x85ft3_yolo26n_train960_eval960_b4_ep1_20260927_031758/best.pt
+03:23:21     0.627858  full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/epoch1.pt
+03:23:21     0.590208  full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/epoch0.pt
+03:23:24 BatchNorm recalibration (uniform soup): raw 0.717547 vs recal 0.717089 -> use raw
+03:23:24 weighted greedy soup: start 5f0e36e1c51e -> 0.725196
+03:23:26 weighted greedy soup: +c30577078486 (alpha 0.5) -> 0.723895 rejected; best 0.725196 with 1 ingredients
+03:23:27 weighted greedy soup: +c37d40270e64 (alpha 0.5) -> 0.721602 rejected; best 0.725196 with 1 ingredients
+03:23:34 weighted greedy soup: +ac39e95d477a (alpha 0.5) -> 0.725474 rejected; best 0.725196 with 1 ingredients
+03:23:36 weighted greedy soup: +8a26a6868150 (alpha 0.5) -> 0.714604 rejected; best 0.725196 with 1 ingredients
+03:23:37 weighted greedy soup: +6c1478a2a0d6 (alpha 0.5) -> 0.708691 rejected; best 0.725196 with 1 ingredients
+03:23:37 soup: uniform raw 0.717547 / recal 0.717089; weighted greedy (raw) 1 ingredients, shares [1.0] -> 0.725196 (16.5 s)
+03:23:37 ===== soup done in 0.3 min
+03:23:37 ===== tta
+03:23:38 tta individual: already searched for this checkpoint
+03:23:38 ===== tta done in 0.0 min
+03:23:38 ===== select
+03:24:01 select: frozen full_x85ft2_yolo26n_train640_eval640_b4_ep1_20260927_030939/best.pt full 0.725196 | held-out estimate 0.721401 (optimism gap +0.0038) | target >= 0.87: not met | floor >= 0.85: not met | organizer halves match: True
+03:24:01     0.725196  picked 6/10  frozen full_x85ft2_yolo26n_train640_eval640_b4_ep1_20260927_030939/best.pt
+03:24:01     0.720756  picked 3/10  frozen full_x85ft1_yolo26n_train640_eval640_b4_ep1_20260927_025935/best.pt
+03:24:01     0.717547  picked 0/10  uniform soup (raw)
+03:24:01     0.717089  picked 1/10  uniform soup (recal)
+03:24:01     0.691943  picked 0/10  baseline full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/best.pt (ep 3)
+03:24:01     0.684422  picked 0/10  frozen full_x85ft3_yolo26n_train960_eval960_b4_ep1_20260927_031758/best.pt
+03:24:01     0.627858  picked 0/10  frozen full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/epoch1.pt
+03:24:01     0.590208  picked 0/10  frozen full_cmpXsmoke_yolo26n_train640_eval640_b4_ep3_20260927_024346/epoch0.pt
+03:24:01 ===== select done in 0.4 min
+03:24:01 report: C:\Users\diego\OneDrive\Documents\GitHub\Lockheed-Hackathon\uprm-hackathon-2026\runs\x85\report_20260927_032401\report.md
+03:24:01 best verified single-checkpoint candidate: ft2 best (best.pt) imgsz 640, NMS IoU 0.7 -> 0.7251958223906431
+03:24:01 VERDICT: target not achieved; best fresh-kernel score 0.7251958223906431
+03:24:01 manifest: C:\Users\diego\OneDrive\Documents\GitHub\Lockheed-Hackathon\uprm-hackathon-2026\runs\x85\manifest.json
+######## report exit 0

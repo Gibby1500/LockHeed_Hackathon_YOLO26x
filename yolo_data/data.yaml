@@ -1,0 +1,5 @@
+path: C:\Users\diego\OneDrive\Documents\GitHub\Lockheed-Hackathon\uprm-hackathon-2026\yolo_data
+train: images/train
+val: images/val
+names:
+  0: plastic_bag
