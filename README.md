@@ -29,10 +29,3 @@ in this review copy. Review the configuration cell before running the notebook:
 its default `RUN_MODE = "full"` starts 100 epochs when the training cells are executed.
 For evaluation, set `RUN_MODE = "evaluate"` and choose a confirmed checkpoint via
 `EVAL_CHECKPOINT`. Existing saved outputs are historical, not newly generated validation.
-
-## Review status
-
-The user approved the initial local commit, including datasets, weights, and outputs.
-No GitHub remote has been configured; publishing remains a separate step requiring
-approval. No training, package installation, or official test download was performed
-during preparation.
